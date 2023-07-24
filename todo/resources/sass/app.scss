@@ -1,0 +1,282 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+
+
+//HOME page
+.greeting {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+}
+
+.home-container {
+    .row {
+        margin-top: 70px;
+
+        .col-md-8 {
+            display: flex;
+            gap: 100px;
+            margin: auto;
+            height: 300px;
+
+            .card {
+                width: 300px;
+                margin-left: 50px;
+                border: none;
+
+                &:hover {
+                    border: 1px solid rgba(114, 113, 113, 0.472);
+                    border-radius: 2em;
+                    box-shadow: 0 15px 15px 15px rgba(156, 155, 155, 0.587);
+                }
+
+                a {
+                    text-align: center;
+                    margin-top: 45%;
+                    text-decoration: none;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    letter-spacing: 3px;
+                    color: rgb(2, 4, 77);
+                }
+            }
+        }
+    }
+}
+
+//CREATE page
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-card {
+    width: 35%;
+    margin-left: 33%;
+
+    .main-form {
+        margin: 5% 15%;
+
+        .input {
+            .form-input {
+                width: 95%;
+            }
+
+            .form-input {
+                margin-left: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            textarea {
+                display: block;
+                width: 95%;
+                max-height: 200px;
+                border-radius: 0.5em;
+                border: 0.8px solid rgb(155, 164, 172);
+                background-color: rgba(251, 251, 251, 0.46);
+            }
+        }
+
+        .btn {
+            border: 1px solid rgb(93, 148, 225);
+            background-color: rgba(55, 118, 208, 0.625);
+
+            &:hover {
+                background-color: rgba(132, 175, 235, 0.689);
+                box-shadow: 0 2px 5px 3px rgba(164, 206, 243, 0.538);
+            }
+        }
+    }
+
+    .goback {
+        background-color: rgb(143, 185, 185);
+        text-decoration: none;
+        color: black;
+        text-align: center;
+
+        &:hover {
+            background-color: rgba(183, 219, 219, 0.835);
+            color: rgb(91, 91, 91);
+        }
+    }
+}
+
+//INDEX page
+h2 {
+    text-align: center;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5%;
+
+    .list {
+        border: 1px solid black;
+        border-radius: 2em;
+        width: 25vw;
+        height: 50vh;
+        padding: 10px;
+
+        &:hover {
+            background-color: rgba(247, 219, 255, 0.978);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+
+            ol {
+                margin-left: 20px;
+                position: absolute;
+
+                .title-link {
+                    margin-top: 25px;
+                    text-decoration: none;
+                    font-size: 22px;
+                    color: black;
+                    letter-spacing: 2px;
+
+                    &:hover {
+                        color: rgb(2, 2, 160);
+                    }
+                }
+
+                .due-date {
+                    font-size: 11px;
+                    color: grey;
+                }
+
+                .notes {
+                    font-size: 18px;
+                    color: black;
+                    padding-top: 20px;
+                    margin-right: 35px;
+
+                    .read-more {
+                        text-decoration: none;
+                        font-size: 12px;
+                        color: darkgrey;
+
+                        &:hover {
+                            color: rgb(2, 2, 160);
+                        }
+
+                    }
+                }
+
+                .line {
+                    padding: 15px;
+                    height: 21vh;
+                    border-left: 1px solid rgba(204, 204, 204, 0.67);
+                }
+
+                .buttons {
+                    position: absolute;
+                    left: -30px;
+                    top: 10px;
+                    color: black;
+
+                    .btn {
+                        font-size: 12px;
+                        padding: 3px;
+                    }
+
+                    .btn-edit {
+                        padding-right: 18px;
+
+                        &:hover {
+                            background-color: rgb(51, 207, 116);
+                            color: white;
+                        }
+                    }
+
+                    .btn-del {
+                        &:hover {
+                            background-color: rgba(210, 25, 62, 0.963);
+                            color: white;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//SHOW page
+.show-card {
+    width: 40vw;
+    margin-left: 30vw;
+    text-align: center;
+
+    .title {
+        font-size: 35px;
+        letter-spacing: 2px;
+        padding-top: 10px;
+    }
+
+    .col-md-8 {
+        margin-left: 10%;
+        width: 80%;
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        height: 30px;
+        width: 40px;
+
+        .btn-edit {
+            padding: 5px 8px;
+            border-radius: 0.5em;
+            color: rgb(21, 20, 20);
+            text-decoration: none;
+
+            &:hover {
+                background-color: rgb(111, 184, 111);
+                color: white;
+            }
+        }
+
+        .btn-delete {
+            background-color: transparent;
+            padding: 5px 5px;
+            border-radius: 0.5em;
+            color: rgb(33, 33, 33);
+            border: none;
+
+            &:hover {
+                background-color: rgb(215, 32, 69);
+                color: white;
+            }
+        }
+
+    }
+
+    .goback {
+        background-color: rgb(143, 185, 185);
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            background-color: rgba(183, 219, 219, 0.835);
+            color: rgb(91, 91, 91);
+        }
+    }
+}
