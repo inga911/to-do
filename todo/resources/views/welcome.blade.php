@@ -28,20 +28,19 @@
             height: 10vh;
         }
 
-        header>.home-login>a {
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
+        header>.home-login>a,
         header>.register>a {
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 35px;
             font-size: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            color: rgb(6, 6, 83);
+        }
+
+        header>.home-login>a:hover,
+        header>.register>a:hover {
+            color: rgb(49, 119, 188)
         }
 
         .hero {
@@ -51,15 +50,15 @@
 
         h1 {
             font-size: 40px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-weight: 200;
         }
 
         h5 {
             font-size: 28px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-weight: 200;
-
+            letter-spacing: 2px
         }
 
         img {
@@ -67,10 +66,16 @@
             margin-left: 25%;
         }
 
-        footer{
-            background-color: aquamarine;
-            height: 15vh;
+        .img-section {
+            margin: 50px 0;
+        }
+
+        footer {
+            background-color: rgba(241, 245, 244, 0.795);
+            height: 7vh;
             margin: 0;
+            text-align: center;
+            padding-top: 2vh;
         }
     </style>
 </head>
@@ -96,16 +101,15 @@
     </header>
     <div class="hero">
         <h1>Welcome to the TODO!</h1>
-        <h5>Take a look at what the ToDo app looks like</p>
+        <h5>Take a look at what the ToDo app looks like &#128064;</p>
     </div>
-    <img src="{{ asset('img') . '/login.png' }}" alt="Login page">
-    <img src="{{ asset('img') . '/todo-home-page.png' }}" alt="Home page">
-    <img src="{{ asset('img') . '/create.png' }}" alt="Create page">
-    <img src="{{ asset('img') . '/list.png' }}" alt="List page">
+    <div class="img-section"><img src="{{ asset('img') . '/login.png' }}" alt="Login page"></div>
+    <div class="img-section"><img src="{{ asset('img') . '/todo-home-page.png' }}" alt="Home page"></div>
+    <div class="img-section"><img src="{{ asset('img') . '/create.png' }}" alt="Create page"></div>
+    <div class="img-section"><img src="{{ asset('img') . '/list.png' }}" alt="List page"></div>
 
     <footer>
-<p>Terms of use</p>
-<p> &copy; 2023 ToDo App</p>
+        <p> &copy; 2023 Copyright: ToDo App</p>
     </footer>
 </body>
 

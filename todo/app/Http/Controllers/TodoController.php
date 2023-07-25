@@ -32,12 +32,23 @@ class TodoController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|min:3|max:100',
             'notes' => 'required|min:10|max:300',
+            'end' => 'required|date',
+            'duetime' => 'required|date_format:H:i',
+        ], [
+            'title.required' => 'The title field is required.',
+            'title.min' => 'The title must be at least :min characters.',
+            'title.max' => 'The title may not be greater than :max characters.',
+            'notes.required' => 'The notes field is required.',
+            'notes.min' => 'The notes must be at least :min characters.',
+            'notes.max' => 'The notes may not be greater than :max characters.',
+            'end.required' => 'The due date field is required.',
+            'duetime.required' => 'The due time field is required.',
         ]);
         if ($validator->fails()) {
-            $request->flash();
             return redirect()
                 ->back()
-                ->withErrors($validator);
+                ->withErrors($validator)
+                ->withInput();
         }
         $todo = new Todo;
         $todo->title = $request->title;
@@ -69,6 +80,27 @@ class TodoController extends Controller
 
     public function update(Request $request, Todo $todo)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|min:3|max:100',
+            'notes' => 'required|min:10|max:300',
+            'end' => 'required|date',
+            'duetime' => 'required|date_format:H:i',
+        ], [
+            'title.required' => 'The title field is required.',
+            'title.min' => 'The title must be at least :min characters.',
+            'title.max' => 'The title may not be greater than :max characters.',
+            'notes.required' => 'The notes field is required.',
+            'notes.min' => 'The notes must be at least :min characters.',
+            'notes.max' => 'The notes may not be greater than :max characters.',
+            'end.required' => 'The due date field is required.',
+            'duetime.required' => 'The due time field is required.',
+        ]);
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
         $data = [];
 
         if ($request->has('title')) {
@@ -89,7 +121,9 @@ class TodoController extends Controller
 
         $todo->update($data);
 
-        return redirect()->route('todo-index')->with('ok', $todo->title . ' was updated');;
+        return redirect()
+            ->route('todo-index')
+            ->with('info', $todo->title . ' was updated');;
     }
 
 

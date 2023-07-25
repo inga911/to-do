@@ -7,8 +7,16 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
+.py-4 {
+    margin: 0;
+    padding-bottom: 0;
+}
 
 //HOME page
 .greeting {
@@ -19,6 +27,8 @@
 }
 
 .home-container {
+    height: 61vh;
+
     .row {
         margin-top: 70px;
 
@@ -54,6 +64,63 @@
     }
 }
 
+//EDIT
+.main-edit-window-container {
+    height: 79.5vh;
+    padding-top: 6vh;
+
+    .main-card {
+        width: 35%;
+        margin-left: 33%;
+
+        .main-form {
+            margin: 2% 10%;
+
+            .input {
+                .form-input {
+                    width: 95%;
+                }
+
+                .form-input {
+                    margin-left: 0;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                textarea {
+                    display: block;
+                    width: 95%;
+                    max-height: 200px;
+                    border-radius: 0.5em;
+                    border: 0.8px solid rgb(155, 164, 172);
+                    background-color: rgba(251, 251, 251, 0.46);
+                }
+            }
+
+            .btn {
+                border: 1px solid rgb(93, 148, 225);
+                background-color: rgba(55, 118, 208, 0.625);
+
+                &:hover {
+                    background-color: rgba(132, 175, 235, 0.689);
+                    box-shadow: 0 2px 5px 3px rgba(164, 206, 243, 0.538);
+                }
+            }
+        }
+
+        .goback {
+            background-color: rgb(143, 185, 185);
+            text-decoration: none;
+            color: black;
+            text-align: center;
+
+            &:hover {
+                background-color: rgba(183, 219, 219, 0.835);
+                color: rgb(91, 91, 91);
+            }
+        }
+    }
+}
+
 //CREATE page
 h1 {
     text-align: center;
@@ -61,53 +128,58 @@ h1 {
     letter-spacing: 2px;
 }
 
-.main-card {
-    width: 35%;
-    margin-left: 33%;
+.main-create-window-container {
+    height: 72vh;
+    // padding: 3vh;
 
-    .main-form {
-        margin: 5% 15%;
+    .main-card {
+        width: 35%;
+        margin-left: 33%;
 
-        .input {
-            .form-input {
-                width: 95%;
+        .main-form {
+            margin: 2% 8%;
+
+            .input {
+                .form-input {
+                    width: 95%;
+                }
+
+                .form-input {
+                    margin-left: 0;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                textarea {
+                    display: block;
+                    width: 95%;
+                    max-height: 200px;
+                    border-radius: 0.5em;
+                    border: 0.8px solid rgb(155, 164, 172);
+                    background-color: rgba(251, 251, 251, 0.46);
+                }
             }
 
-            .form-input {
-                margin-left: 0;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-            }
+            .btn {
+                border: 1px solid rgb(93, 148, 225);
+                background-color: rgba(55, 118, 208, 0.625);
 
-            textarea {
-                display: block;
-                width: 95%;
-                max-height: 200px;
-                border-radius: 0.5em;
-                border: 0.8px solid rgb(155, 164, 172);
-                background-color: rgba(251, 251, 251, 0.46);
+                &:hover {
+                    background-color: rgba(132, 175, 235, 0.689);
+                    box-shadow: 0 2px 5px 3px rgba(164, 206, 243, 0.538);
+                }
             }
         }
 
-        .btn {
-            border: 1px solid rgb(93, 148, 225);
-            background-color: rgba(55, 118, 208, 0.625);
+        .goback {
+            background-color: rgb(143, 185, 185);
+            text-decoration: none;
+            color: black;
+            text-align: center;
 
             &:hover {
-                background-color: rgba(132, 175, 235, 0.689);
-                box-shadow: 0 2px 5px 3px rgba(164, 206, 243, 0.538);
+                background-color: rgba(183, 219, 219, 0.835);
+                color: rgb(91, 91, 91);
             }
-        }
-    }
-
-    .goback {
-        background-color: rgb(143, 185, 185);
-        text-decoration: none;
-        color: black;
-        text-align: center;
-
-        &:hover {
-            background-color: rgba(183, 219, 219, 0.835);
-            color: rgb(91, 91, 91);
         }
     }
 }
@@ -220,63 +292,147 @@ h2 {
 }
 
 //SHOW page
-.show-card {
-    width: 40vw;
-    margin-left: 30vw;
-    text-align: center;
+.main-window-container {
+    height: 79vh;
+    padding-top: 15vh;
 
-    .title {
-        font-size: 35px;
-        letter-spacing: 2px;
-        padding-top: 10px;
-    }
-
-    .col-md-8 {
-        margin-left: 10%;
-        width: 80%;
+    .show-card {
+        width: 40vw;
+        margin-left: 30vw;
         text-align: center;
-    }
 
-    .buttons {
-        display: flex;
-        height: 30px;
-        width: 40px;
+        .title {
+            font-size: 35px;
+            letter-spacing: 2px;
+            padding-top: 10px;
+        }
 
-        .btn-edit {
-            padding: 5px 8px;
-            border-radius: 0.5em;
-            color: rgb(21, 20, 20);
+        .col-md-8 {
+            margin-left: 10%;
+            width: 80%;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            height: 30px;
+            width: 40px;
+
+            .btn-edit {
+                padding: 5px 8px;
+                border-radius: 0.5em;
+                color: rgb(21, 20, 20);
+                text-decoration: none;
+
+                &:hover {
+                    background-color: rgb(111, 184, 111);
+                    color: white;
+                }
+            }
+
+            .btn-delete {
+                background-color: transparent;
+                padding: 5px 5px;
+                border-radius: 0.5em;
+                color: rgb(33, 33, 33);
+                border: none;
+
+                &:hover {
+                    background-color: rgb(215, 32, 69);
+                    color: white;
+                }
+            }
+
+        }
+
+        .goback {
+            background-color: rgb(143, 185, 185);
             text-decoration: none;
+            color: black;
 
             &:hover {
-                background-color: rgb(111, 184, 111);
-                color: white;
+                background-color: rgba(183, 219, 219, 0.835);
+                color: rgb(91, 91, 91);
             }
         }
-
-        .btn-delete {
-            background-color: transparent;
-            padding: 5px 5px;
-            border-radius: 0.5em;
-            color: rgb(33, 33, 33);
-            border: none;
-
-            &:hover {
-                background-color: rgb(215, 32, 69);
-                color: white;
-            }
-        }
-
     }
+}
 
-    .goback {
-        background-color: rgb(143, 185, 185);
-        text-decoration: none;
-        color: black;
+.forgot-pasw {
+    text-decoration: none;
+    color: grey;
 
-        &:hover {
-            background-color: rgba(183, 219, 219, 0.835);
-            color: rgb(91, 91, 91);
+    &:hover {
+        text-decoration: underline;
+        color: grey;
+    }
+}
+
+//ALERT OK
+.row-ok {
+    position: relative;
+    width: 55%;
+    margin-left: -25%;
+    background-color: rgb(139, 227, 139);
+
+
+    .alert-ok {
+        position: absolute;
+        top: -100px;
+        width: 60%;
+        opacity: 0;
+        background-color: #b2faa2bd;
+        color: #1c721d;
+        border: 1px solid #d2f5c6;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: top 0.5s ease, opacity 0.5s ease;
+        z-index: 9999;
+
+        &.show {
+            top: 0;
+            opacity: 1;
         }
     }
+}
+
+
+//ALERT INFO
+.row-info {
+    background-color: rgb(139, 192, 227);
+    position: relative;
+    width: 55%;
+    margin-left: -25%;
+    top: -50px;
+
+    .alert-info {
+        position: absolute;
+        top: -100px;
+        width: 60%;
+        opacity: 0;
+        background-color: #87c2f9bd;
+        color: #1c3072;
+        border: 1px solid #c6def5;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: top 0.5s ease, opacity 0.5s ease;
+        z-index: 9999;
+
+        &.show {
+            top: 0;
+            opacity: 1;
+        }
+    }
+}
+
+//FOOTER
+footer {
+    background-color: rgba(241, 245, 244, 0.795);
+    height: 7vh;
+    margin: 0;
+    text-align: center;
+    padding-top: 2vh;
+    margin-top: 2%;
 }
