@@ -59,7 +59,7 @@ class TodoController extends Controller
         $todo->save();
         return redirect()
             ->route('todo-index')
-            ->with('ok', 'New todo was added');
+            ->with('ok', 'New task was added');
     }
 
 

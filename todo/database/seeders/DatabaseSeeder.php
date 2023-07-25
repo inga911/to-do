@@ -15,5 +15,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => Hash::make('123'),
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Client',
+            'email' => 'client@gmail.com',
+            'password' => Hash::make('123'),
+        ]);
     }
 }
